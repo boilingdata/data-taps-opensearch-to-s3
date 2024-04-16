@@ -12,7 +12,7 @@ You need to have [BoilingData account](https://github.com/boilingdata/boilingdat
 
 ## Run
 
-1. (optional) Start [local OpenSearch cluster](docker-compose.yaml) and add test data
+### 1. (optional) Start [local OpenSearch cluster](docker-compose.yaml) and add test data
 
 Each call adds 1m small docs via the Bulk API. You can run it multiple times to get more data. The data is dummy, the same single entry.
 
@@ -28,7 +28,7 @@ time \
     node src/addDocs.local.js
 ```
 
-2. Dump OpenSearch index into S3 as Parquet files via a Data Tap.
+### 2. Dump OpenSearch index into S3 as Parquet files via a Data Tap.
 
 You need your Data Tap URL in `BD_TAPURL` environment variable as well as your BoilingData account credentials in `BD_USERNAME` and `BD_PASSWORD`.
 
