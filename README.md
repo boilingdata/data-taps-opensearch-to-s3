@@ -47,7 +47,7 @@ time \
     node src/index.js
 ```
 
-Clipped output showing network capped results:
+Clipped output showing network capped results (i.e. utilising full capacity of home broadband uplink).
 
 ```javascript
 { totalCount: 2186008 }
