@@ -6,7 +6,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "up": "OPENSEARCH_INITIAL_ADMIN_PASSWORD='Admin123__kjljklkjl---' docker-compose up",
+    "up": "OPENSEARCH_INITIAL_ADMIN_PASSWORD=${ES_PASSWORD} docker-compose up",
     "test": "node src/index.js"
   },
   "dependencies": {
