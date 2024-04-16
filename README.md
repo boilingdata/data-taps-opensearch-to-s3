@@ -16,7 +16,7 @@ yarn install
 yarn up
 ```
 
-2. (optional for local testing) Add test data
+2. (optional) Add test data
 
 ```shell
 time \
