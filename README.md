@@ -21,7 +21,7 @@ yarn up
 time \
     INDEX=books \
     ES_USERNAME=admin \
-    ES_PASSWORD=putYourPwHere \
+    ES_PASSWORD='Admin123__kjljklkjl---' \
     ES_HOST=localhost \
     ES_PORT=9200 \
     node src/addDocs.local.js
