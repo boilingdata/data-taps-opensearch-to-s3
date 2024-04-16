@@ -11,7 +11,8 @@ const auth = `${user}:${pw}`;
 const node = "https://" + auth + "@" + host + ":" + port;
 
 // index and settings
-const index = process.env["INDEX"] ?? "books";
+const index = process.env["INDEX"];
+if (!index) throw new Error("Set INDEX env to match your OpenSearch index to dump");
 const workers = parseInt(process.env["WORKERS"] ?? "2");
 const batchSize = parseInt(process.env["BATCH_SIZE"] ?? "2000");
 

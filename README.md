@@ -20,7 +20,9 @@ node src/addDocs.local.js
 3. Dump the index into S3 via Data Tap.
 
 ```shell
-time ES_USERNAME=admin \
+time \
+    INDEX=books \
+    ES_USERNAME=admin \
     ES_PASSWORD=putYourPwHere \
     ES_HOST=localhost \
     ES_PORT=9200 \
