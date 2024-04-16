@@ -4,7 +4,7 @@
 
 This multi-threaded node application uses OpenSearch [sliced Scroll API](https://opensearch.org/docs/latest/search-plugins/searching-data/paginate/#scroll-search) to efficiently dump an index from an existing Elasticsearch/OpenSearch index to S3 as compressed Parquet files via an existing [Data Tap](https://github.com/boilingdata/data-taps-template).
 
-You need to have [BoilingData account](https://github.com/boilingdata/boilingdata-bdcli) and use it to create a [Data Tap](https://github.com/boilingdata/data-taps-template).
+You need to have [BoilingData account](https://github.com/boilingdata/boilingdata-bdcli) and use it to create a [Data Tap](https://github.com/boilingdata/data-taps-template). A Data Tap is a single AWS Lambda function with Function URL and customized C++ runtime embedding DuckDB. It uses streaming SQL clause to upload the HTTP POSTed newline JSON data to S3, hive partitioned, and as ZSTD compressed Parquet. You can tune the SQL clause your self for filtering, aggregations etc.
 
 1. (optional) Start local OpenSearch cluster and add test data
 
