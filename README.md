@@ -46,3 +46,44 @@ time \
     BD_PASSWORD=addYourBdPassword \
     node src/index.js
 ```
+
+Clipped output showing network capped results:
+
+```json
+{ totalCount: 2186008 }
+{ id: 1, p: '0%', bytes: 318918 }
+{ id: 7, p: '0%', bytes: 318913 }
+{ id: 1, p: '1.84%', bytes: 318918 }
+{ id: 7, p: '1.84%', bytes: 318913 }
+{ id: 9, p: '0%', bytes: 318876 }
+{ id: 2, p: '0%', bytes: 318841 }
+{ id: 9, p: '1.83%', bytes: 318876 }
+{ id: 8, p: '0%', bytes: 318902 }
+{ id: 2, p: '1.83%', bytes: 318841 }
+{ id: 8, p: '1.82%', bytes: 318902 }
+{ id: 3, p: '0%', bytes: 318836 }
+{ id: 5, p: '0%', bytes: 318886 }
+{ id: 3, p: '1.83%', bytes: 318836 }
+{ id: 5, p: '1.83%', bytes: 318886 }
+{ id: 6, p: '0%', bytes: 318826 }
+{ id: 10, p: '0%', bytes: 318970 }
+{ id: 6, p: '1.83%', bytes: 318826 }
+{ id: 4, p: '0%', bytes: 318912 }
+{ id: 10, p: '1.83%', bytes: 318970 }
+{ id: 4, p: '1.83%', bytes: 318912 }
+{ id: 1, p: '2.75%', bytes: 638917 }
+
+...
+{ id: 4, p: '100.00%', bytes: 37753617 }
+{ id: 9, p: '99.98%', bytes: 37401533 }
+{ id: 4, p: '100.00%', bytes: 37930929 }
+{ id: 9, p: '100.00%', bytes: 37750612 }
+{ id: 9, p: '100.00%', bytes: 37757436 }
+{
+  sentCount: 2186008,
+  totalCount: 2186008,
+  sentMBytes: '361.05',
+  throughput: '8.18'
+}
+✨  Done in 44.52s.
+```
