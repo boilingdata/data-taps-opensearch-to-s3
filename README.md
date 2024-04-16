@@ -18,6 +18,8 @@ yarn up
 
 2. (optional) Add test data
 
+Each call adds 1m small docs via the Bulk API. You can run it multiple times to get more data. The data is dummy, the same single entry.
+
 ```shell
 time \
     INDEX=books \
