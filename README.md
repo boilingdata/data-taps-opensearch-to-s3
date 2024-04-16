@@ -28,7 +28,7 @@ time \
     node src/addDocs.local.js
 ```
 
-3. Dump the index into S3 as Parquet files via Data Tap.
+3. Dump OpenSearch index into S3 as Parquet files via a Data Tap.
 
 ```shell
 time \
