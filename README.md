@@ -1,6 +1,8 @@
-# OpenSearch --> Data Taps --> S3 Parquet
+# OpenSearch --> Data Tap --> S3 Parquet
 
-This node application uses OpenSearch [sliced Scroll API](https://opensearch.org/docs/latest/search-plugins/searching-data/paginate/#scroll-search) with multiple [NodeJS worker threads](https://nodejs.org/api/worker_threads.html) to dump an index from an existing Elasticsearch/OpenSearch to S3 as Parquet files via an existing [Data Tap](https://github.com/boilingdata/data-taps-template).
+> "The same data takes 50-80x more space on a highly available (HA) OpenSearch vs S3 with compressed Parquet files"
+
+This multi-threaded node application uses OpenSearch [sliced Scroll API](https://opensearch.org/docs/latest/search-plugins/searching-data/paginate/#scroll-search) to efficiently dump an index from an existing Elasticsearch/OpenSearch index to S3 as compressed Parquet files via an existing [Data Tap](https://github.com/boilingdata/data-taps-template).
 
 You need to have [BoilingData account](https://github.com/boilingdata/boilingdata-bdcli) and use it to create a [Data Tap](https://github.com/boilingdata/data-taps-template).
 
