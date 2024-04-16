@@ -2,7 +2,7 @@
 
 > "The same data costs 70-100x more on a highly available (HA) OpenSearch cluster with EBS Volumes vs. S3 with compressed Parquet files!"
 
-This multi-threaded node application uses OpenSearch (Elasticsearch) [sliced Scroll API](https://opensearch.org/docs/latest/search-plugins/searching-data/paginate/#scroll-search) to efficiently dump an index to S3 via a [Data Tap](https://github.com/boilingdata/data-taps-template).
+This multi-threaded (configurable number of workers) node application uses OpenSearch (Elasticsearch) [sliced Scroll API](https://opensearch.org/docs/latest/search-plugins/searching-data/paginate/#scroll-search) to efficiently dump an index to S3 via a [Data Tap](https://github.com/boilingdata/data-taps-template).
 
 ## Data Tap
 
