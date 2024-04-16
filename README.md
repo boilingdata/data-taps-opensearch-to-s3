@@ -4,7 +4,7 @@
 
 This multi-threaded node application uses OpenSearch (Elasticsearch) [sliced Scroll API](https://opensearch.org/docs/latest/search-plugins/searching-data/paginate/#scroll-search) to efficiently dump an index to S3 via a [Data Tap](https://github.com/boilingdata/data-taps-template).
 
-A Data Tap is a single AWS Lambda function with Function URL and customized C++ runtime embedding DuckDB. It uses streaming SQL clause to upload the HTTP POSTed newline JSON data to S3, hive partitioned, and as ZSTD compressed Parquet. You can tune the SQL clause your self for filtering, aggregations etc.
+A Data Tap is a single AWS Lambda function with Function URL and customized C++ runtime embedding DuckDB. It uses streaming SQL clause to upload the buffered HTTP POSTed newline JSON data in the Lambda to S3, hive partitioned, and as ZSTD compressed Parquet. You can tune the SQL clause your self for filtering, search, and aggregations. You can also set the thresholds when the upload to S3 happens. A Data Tap runs already very efficiently with the smallest arm64 AWS Lambda, making it the simplest, fastest, and most cost efficient solution for streaming data onto S3.
 
 You need to have [BoilingData account](https://github.com/boilingdata/boilingdata-bdcli) and use it to create a [Data Tap](https://github.com/boilingdata/data-taps-template).
 
