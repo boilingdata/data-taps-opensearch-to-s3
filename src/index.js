@@ -1,7 +1,5 @@
 import { Client } from "@opensearch-project/opensearch";
 import { Worker } from "worker_threads";
-import { getDocCount, createIndex } from "./lib/opensearch.js";
-import { addMultipleDocs } from "./lib/testData.js";
 
 // OpenSearch connection
 const host = process.env["ES_HOST"] ?? "localhost";
@@ -27,16 +25,13 @@ async function runWithWorker(workerData) {
   });
 }
 
+function getDocCount(client, index) {
+  return client.count({ index, body: { query: { match_all: {} } } });
+}
+
 async function main() {
   const start = Date.now();
   // total count
-  // await createIndex(client, index).catch(() => {});
-  // await addMultipleDocs(index, client);
-  // await addMultipleDocs(index, client);
-  // await addMultipleDocs(index, client);
-  // await addMultipleDocs(index, client);
-  // await addMultipleDocs(index, client);
-  // await addMultipleDocs(index, client);
   const totalCount = (await getDocCount(client, index)).body.count;
   console.log({ totalCount });
   // return;
