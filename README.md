@@ -49,7 +49,7 @@ time \
 
 Clipped output showing network capped results:
 
-```json
+```javascript
 { totalCount: 2186008 }
 { id: 1, p: '0%', bytes: 318918 }
 { id: 7, p: '0%', bytes: 318913 }
