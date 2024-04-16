@@ -8,8 +8,11 @@ import https from "https";
 const TAP_TOKEN_FILE = ".taptoken"; // fix this
 const bd_username = process.env["BD_USERNAME"];
 const bd_password = process.env["BD_PASSWORD"];
-const bd_tapTokenUrl = process.env["BD_TAPURL"];
+const bd_tapUrl = process.env["BD_TAPURL"];
 const bd_tapowner = bd_username;
+if (!bd_username || !bd_password || !bd_tapUrl) {
+  throw new Error("You need to set BD_USERNAME, BD_PASSWORD, and BD_TAPURL envs");
+}
 
 const httpsAgent = new https.Agent({ keepAlive: true, timeout: 3000, maxSockets: 50 });
 let jwtToken, decoded;
@@ -44,7 +47,7 @@ export async function sendToDataTap(rows) {
     async (bail) => {
       const headers = { "x-bd-authorization": token, "Content-Type": "application/x-ndjson" };
       const signal = AbortSignal.timeout(5000);
-      const res = await fetch(bd_tapTokenUrl, { method: "POST", headers, body, agent: httpsAgent, signal });
+      const res = await fetch(bd_tapUrl, { method: "POST", headers, body, agent: httpsAgent, signal });
       const jsonRes = await res.json();
       // console.log({ sentBytes: body.length, jsonRes });
       if (jsonRes?.statusCode == 403) bail("Unauthorized");

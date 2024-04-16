@@ -4,8 +4,9 @@ import { Worker } from "worker_threads";
 // OpenSearch connection
 const host = process.env["ES_HOST"] ?? "localhost";
 const port = parseInt(process.env["ES_PORT"] ?? "9200");
-const user = process.env["ES_USERNAME"] ?? "admin";
-const pw = process.env["ES_PASSWORD"] ?? "Admin123__kjljklkjl---";
+const user = process.env["ES_USERNAME"];
+const pw = process.env["ES_PASSWORD"];
+if (!user || !pw) throw new Error("Set ES_USERNAME and ES_PASSWORD");
 const auth = `${user}:${pw}`;
 const node = "https://" + auth + "@" + host + ":" + port;
 

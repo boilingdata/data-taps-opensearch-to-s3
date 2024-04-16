@@ -1,6 +1,6 @@
 import { Client } from "@opensearch-project/opensearch";
 import { isMainThread, workerData, parentPort } from "worker_threads";
-import { sendToDataTap } from "./lib/boilingdata.js";
+import { sendToDataTap } from "./boilingdata.js";
 
 let allResultsLength = 0;
 let totalBytes = 0;
