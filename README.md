@@ -47,7 +47,7 @@ time \
     node src/index.js
 ```
 
-Clipped output showing network capped results (i.e. utilising full capacity of home broadband uplink).
+Clipped output showing network capped results (i.e. utilising full capacity of home broadband uplink in this example case), where `throughput` is the actual payload only data volume.
 
 ```javascript
 { totalCount: 2186008 }
