@@ -1,4 +1,4 @@
-# OpenSearch --> Data Tap --> S3 Parquet
+# OpenSearch or ES --> Data Tap --> S3 Parquet
 
 > "The same data costs 70-100x more on a highly available (HA) OpenSearch cluster with EBS Volumes vs. S3 with compressed Parquet files!"
 
