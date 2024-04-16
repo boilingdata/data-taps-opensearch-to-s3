@@ -6,21 +6,12 @@ This multi-threaded node application uses OpenSearch [sliced Scroll API](https:/
 
 You need to have [BoilingData account](https://github.com/boilingdata/boilingdata-bdcli) and use it to create a [Data Tap](https://github.com/boilingdata/data-taps-template).
 
-```shell
-yarn install
-```
-
-1. (optional) Start local OpenSearch cluster
-
-```shell
-yarn up
-```
-
-2. (optional) Add test data
+1. (optional) Start local OpenSearch cluster and add test data
 
 Each call adds 1m small docs via the Bulk API. You can run it multiple times to get more data. The data is dummy, the same single entry.
 
 ```shell
+yarn up
 time \
     INDEX=books \
     ES_USERNAME=admin \
@@ -30,7 +21,7 @@ time \
     node src/addDocs.local.js
 ```
 
-3. Dump OpenSearch index into S3 as Parquet files via a Data Tap.
+2. Dump OpenSearch index into S3 as Parquet files via a Data Tap.
 
 ```shell
 time \
@@ -67,12 +58,6 @@ Clipped output showing network capped results (i.e. utilising full capacity of h
 { id: 5, p: '1.83%', bytes: 318886 }
 { id: 6, p: '0%', bytes: 318826 }
 { id: 10, p: '0%', bytes: 318970 }
-{ id: 6, p: '1.83%', bytes: 318826 }
-{ id: 4, p: '0%', bytes: 318912 }
-{ id: 10, p: '1.83%', bytes: 318970 }
-{ id: 4, p: '1.83%', bytes: 318912 }
-{ id: 1, p: '2.75%', bytes: 638917 }
-
 ...
 { id: 4, p: '100.00%', bytes: 37753617 }
 { id: 9, p: '99.98%', bytes: 37401533 }
