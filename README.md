@@ -12,7 +12,7 @@ You need to have [BoilingData account](https://github.com/boilingdata/boilingdat
 
 ## Run
 
-1. (optional) Start local OpenSearch cluster and add test data
+1. (optional) Start [local OpenSearch cluster](docker-compose.yaml) and add test data
 
 Each call adds 1m small docs via the Bulk API. You can run it multiple times to get more data. The data is dummy, the same single entry.
 
