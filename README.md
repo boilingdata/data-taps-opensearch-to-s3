@@ -30,6 +30,8 @@ time \
 
 2. Dump OpenSearch index into S3 as Parquet files via a Data Tap.
 
+You need your Data Tap URL in `BD_TAPURL` environment variable as well as your BoilingData account credentials in `BD_USERNAME` and `BD_PASSWORD`.
+
 ```shell
 time \
     INDEX=books \
