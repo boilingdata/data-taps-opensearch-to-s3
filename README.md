@@ -1,6 +1,6 @@
 # OpenSearch --> Data Tap --> S3 Parquet
 
-> "The same data takes 50-80x more space on a highly available (HA) OpenSearch vs S3 with compressed Parquet files"
+> "The same data takes 50-80x more space on a highly available (HA) OpenSearch cluster with EBS Volumes vs S3 with compressed Parquet files. Plus, typically the disk utilisation is closer to 50% than 100%."
 
 This multi-threaded node application uses OpenSearch [sliced Scroll API](https://opensearch.org/docs/latest/search-plugins/searching-data/paginate/#scroll-search) to efficiently dump an index from an existing Elasticsearch/OpenSearch index to S3 as compressed Parquet files via an existing [Data Tap](https://github.com/boilingdata/data-taps-template).
 
