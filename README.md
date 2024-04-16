@@ -79,4 +79,4 @@ Clipped output showing network capped results (i.e. utilising full capacity of h
 ✨  Done in 44.52s.
 ```
 
-> \*) ES replication (2-3x), EBS volume utilisation (50-75%) and the heavy indexing of the data affect the cost efficiency factor. However, the biggest difference comes from the fact that very high S3 durability removes the replication neeed and compressed columnar data format Parquet shrinks the data very efficiently - especially with sorted data driving the factor being even more efficient!
+> \*) ES replication (2-3x), EBS volume utilisation (50-75%), EBS volumen cost (3.8x more than S3), and the heavy indexing of the data affect the cost efficiency factor. However, the biggest difference comes from the fact that very high S3 durability removes the replication neeed and compressed columnar data format Parquet shrinks the data very efficiently - especially with sorted data driving the factor being even more efficient!
