@@ -17,7 +17,8 @@ You need to have [BoilingData account](https://github.com/boilingdata/boilingdat
 Each call adds 1m small docs via the Bulk API. You can run it multiple times to get more data. The data is dummy, the same single entry.
 
 ```shell
-yarn up
+ES_PASSWORD='Admin123__kjljklkjl---' yarn up
+
 time \
     INDEX=books \
     ES_USERNAME=admin \
