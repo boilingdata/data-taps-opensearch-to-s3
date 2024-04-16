@@ -17,7 +17,7 @@ yarn up
 node src/addDocs.local.js
 ```
 
-3. Dump the index into S3 via Data Tap.
+3. Dump the index into S3 as Parquet files via Data Tap.
 
 ```shell
 time \
