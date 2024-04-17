@@ -53,7 +53,7 @@ time \
     node src/index.js
 ```
 
-Clipped output showing network capped results (i.e. utilising full capacity of home broadband uplink in this example case), where `throughput` is the actual payload only data volume.
+Clipped output showing network capped results (i.e. utilising full capacity of my home broadband uplink in this example case), where `throughput` is the actual upload payload only data volume.
 
 ```javascript
 { totalCount: 2186008 }
@@ -83,9 +83,9 @@ Clipped output showing network capped results (i.e. utilising full capacity of h
   sentCount: 2186008,
   totalCount: 2186008,
   sentMBytes: '361.05',
-  throughput: '8.18'
+  throughput: '9.11'
 }
-✨  Done in 44.52s.
+✨  Done in 40.07s.
 ```
 
 > \*) ES replication (2-3x), EBS volume utilisation (50-75%), EBS volumen cost (3.8x more than S3), and the heavy indexing of the data affect the cost efficiency factor. However, the biggest difference comes from the fact that very high S3 durability removes the replication neeed and compressed columnar data format Parquet shrinks the data very efficiently - especially with sorted data driving the factor being even more efficient!
