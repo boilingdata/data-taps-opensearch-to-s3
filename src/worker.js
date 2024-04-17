@@ -17,7 +17,7 @@ async function dumpDataWithScrollAPI(client, index, sliceId, batchSize, numOfSli
   allResultsLength += sres.body?.hits?.hits.length;
   if (sres.body?.hits?.hits.length) dataTapResp = await sendToDataTap(sres.body?.hits?.hits);
   totalBytes += dataTapResp?.sentBytes ?? 0;
-  console.log({ id: sliceId + 1, p: `${Math.floor((allResultsLength / total) * 100)}%`, bytes: totalBytes });
+  console.log({ worker: sliceId + 1, percent: ((allResultsLength / total) * 100).toFixed(2), bytes: totalBytes });
 
   // now we can parallelise
   let scrollResponse;
@@ -28,7 +28,7 @@ async function dumpDataWithScrollAPI(client, index, sliceId, batchSize, numOfSli
     scroll_id = scrollResponse.body._scroll_id;
     allResultsLength += scrollResponse.body?.hits?.hits?.length ?? 0;
     if (scrollResponse.body?.hits?.hits?.length) dataTapProm = sendToDataTap(scrollResponse.body?.hits?.hits);
-    console.log({ id: sliceId + 1, p: `${((allResultsLength / total) * 100).toFixed(2)}%`, bytes: totalBytes });
+    console.log({ worker: sliceId + 1, percent: ((allResultsLength / total) * 100).toFixed(2), bytes: totalBytes });
   } while (scrollResponse?.body?.hits?.hits?.length);
 
   // clear scroll
