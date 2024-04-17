@@ -1,3 +1,5 @@
+[Collect(d)ion and FluentBit](https://github.com/boilingdata/data-taps-fluentbit-example) | [Web Analytics capture](https://github.com/boilingdata/data-taps-webanalytics-example) | [PostgreSQL CDC](https://github.com/boilingdata/data-taps-postgres-cdc) | [API ingestion](https://github.com/boilingdata/data-taps-socrataOpenData-example) | [OpenSearch (ElasticSearch)](https://github.com/boilingdata/data-taps-opensearch-to-s3)
+
 # OpenSearch (ES) --> Data Tap --> S3 Parquet
 
 <p align="center">
